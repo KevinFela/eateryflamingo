@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Eatery at Flamingo</title>
+    <meta name="description" content="Explore our gallery showcasing the vibrant atmosphere, delicious food, premium services, and exciting events at Eatery at Flamingo.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Image Viewer -->
+    <div class="image-viewer" id="imageViewer">
+        <div class="image-viewer-content">
+            <img id="viewerImage" src="" alt="">
+            <button class="image-viewer-close" id="closeViewer">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="image-viewer-nav image-viewer-prev" id="prevImage">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="image-viewer-nav image-viewer-next" id="nextImage">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="image-viewer-counter" id="imageCounter"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-text">EATERY</div>
+                <img src="images/logo.JPG" alt="Flamingo at Eatery Logo" class="logo-image">
+                <div class="logo-text"><span>FLAMINGO</span></div>
+            </a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">OUR <span>GALLERY</span></h2>
+            <div class="content-container">
+                <div class="content-text">
+                    <h2>EXPERIENCE <span>EATERY AT FLAMINGO</span></h2>
+                    <p>Take a visual journey through our vibrant spaces, delicious food, and exciting atmosphere. From casual dinners to lively gatherings, every moment at Eatery at Flamingo is memorable.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Filters -->
+            <div class="gallery-filters">
+                <button class="gallery-filter active" data-filter="all">All Photos</button>
+                <button class="gallery-filter" data-filter="food">Food & Drinks</button>
+                <button class="gallery-filter" data-filter="interior">Restaurant</button>
+                <button class="gallery-filter" data-filter="events">Events</button>
+                <button class="gallery-filter" data-filter="carwash">Car Wash</button>
+                <button class="gallery-filter" data-filter="people">People</button>
+            </div>
+
+            <!-- Loading Indicator -->
+            <div class="gallery-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading amazing photos...</p>
+            </div>
+
+            <!-- No Results -->
+            <div class="gallery-no-results">
+                <i class="fas fa-images"></i>
+                <h3>No photos found</h3>
+                <p>Try selecting a different filter or category.</p>
+            </div>
+
+            <!-- Gallery Grid - All images together without categories -->
+            <div class="gallery-grid">
+                <!-- Restaurant & Interior Images -->
+                <div class="gallery-item" data-category="interior people">
+                    <img src="images/vanue1.jpeg" alt="Modern restaurant interior with comfortable seating">
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="images/vanue2.jpeg" alt="Dining area with ambient lighting">
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="images/vanue3.jpeg" alt="Restaurant bar area">
+                </div>
+                <div class="gallery-item" data-category="interior people">
+                    <img src="images/vanue4.jpeg" alt="Cozy dining experience">
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="images/vanue5.jpeg" alt="DJ booth and entertainment area">
+                </div>
+
+                <!-- Food & Drinks Images -->
+                <div class="gallery-item" data-category="food drinks">
+                    <img src="images/vanue6.jpeg" alt="Creative cocktails and beverages">
+                </div>
+                <div class="gallery-item" data-category="food">
+                    <img src="images/food1.jpeg" alt="Delicious bar snacks and appetizers">
+                </div>
+                <div class="gallery-item" data-category="food">
+                    <img src="images/food2.jpeg" alt="Signature dishes">
+                </div>
+                <div class="gallery-item" data-category="food">
+                    <img src="images/food3.jpeg" alt="Artistic food presentation">
+                </div>
+                <div class="gallery-item" data-category="drinks">
+                    <img src="images/food4.jpeg" alt="Premium drink selection">
+                </div>
+                <div class="gallery-item" data-category="food events">
+                    <img src="images/food5.jpeg" alt="Sunday specials menu">
+                </div>
+
+                <!-- Event Images -->
+                <div class="gallery-item" data-category="events interior">
+                    <img src="images/food6.jpeg" alt="Event space setup">
+                </div>
+                <div class="gallery-item" data-category="events people">
+                    <img src="images/cocktail1.jpeg" alt="Lively event atmosphere">
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="images/cocktail2.jpeg" alt="Live music performance">
+                </div>
+                <div class="gallery-item" data-category="events people">
+                    <img src="images/cocktail3.jpeg" alt="Bottomless and Boujee Event">
+                </div>
+                <div class="gallery-item" data-category="events people">
+                    <img src="images/cocktail4.jpeg" alt="Flamingo Saturday night">
+                </div>
+                <div class="gallery-item" data-category="events people">
+                    <img src="images/cocktail5.jpeg" alt="Big Bird Saturday celebration">
+                </div>
+
+                <!-- Car Wash Images -->
+                <div class="gallery-item" data-category="carwash">
+                    <img src="images/cocktail6.jpeg" alt="Professional car wash service">
+                </div>
+                <div class="gallery-item" data-category="carwash">
+                    <img src="images/carwash1.jpeg" alt="Car detailing process">
+                </div>
+                <div class="gallery-item" data-category="carwash">
+                    <img src="images/carwash2.jpeg" alt="Premium car wash facility">
+                </div>
+                <div class="gallery-item" data-category="carwash">
+                    <img src="images/carwash3.jpeg" alt="Exterior cleaning service">
+                </div>
+                <div class="gallery-item" data-category="carwash">
+                    <img src="images/people1.jpeg" alt="Interior detailing service">
+                </div>
+                <div class="gallery-item" data-category="carwash">
+                    <img src="images/people2.jpeg" alt="Car wash packages and pricing">
+                </div>
+
+                <!-- Additional Images (Add these when you have more photos) -->
+                <div class="gallery-item" data-category="people events">
+                    <img src="images/people3.jpeg" alt="Happy customers enjoying drinks">
+                </div>
+                <div class="gallery-item" data-category="food">
+                    <img src="images/people4.jpeg" alt="Chef's special platter">
+                </div>
+                <div class="gallery-item" data-category="interior">
+                    <img src="images/people5.jpeg" alt="Outdoor seating area">
+                </div>
+                <div class="gallery-item" data-category="people">
+                    <img src="images/people6.jpeg" alt="Group dining experience">
+                </div>
+                <div class="gallery-item" data-category="drinks">
+                    <img src="images/people7.jpeg" alt="Craft beer selection">
+                </div>
+                <div class="gallery-item" data-category="events">
+                    <img src="images/people8.jpeg" alt="Private party setup">
+                </div>
+                <div class="gallery-item" data-category="carwash">
+                    <img src="images/people9.jpeg" alt="Final car wash result">
+                </div>
+                <div class="gallery-item" data-category="food people">
+                    <img src="images/placeholder.JPG" alt="Family enjoying meal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EATERY AT FLAMINGO</h3>
+                    <p>Where casual dining meets premium bar lounge and luxury car care. Experience the perfect blend of great food, drinks, and entertainment.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com/flamingolifestylerestaurant" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/flamingolifestylerestaurant" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://tiktok.com/@flamingolifestylerestaurant" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/27621369848" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>INFORMATION</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Flamingo Avenue, Kagiso 1754</li>
+                        <li><i class="fas fa-phone"></i> +27 62 136 9848</li>
+                        <li><i class="fas fa-envelope"></i> info@eateryflamingo.co.za</li>
+                        <li><i class="fas fa-clock"></i> Open Daily: 12PM - Till Late</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EATERY AT FLAMINGO. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>

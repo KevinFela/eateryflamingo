@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Eatery at Flamingo</title>
+    <meta name="description" content="Discover our premium services including hubbly, luxury car wash, conference facilities, event catering, and upcoming events at Eatery at Flamingo.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
+</head>
+<body>
+    <!-- Image Viewer -->
+    <div class="image-viewer" id="imageViewer">
+        <div class="image-viewer-content">
+            <img id="viewerImage" src="" alt="">
+            <button class="image-viewer-close" id="closeViewer">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="image-viewer-nav image-viewer-prev" id="prevImage">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="image-viewer-nav image-viewer-next" id="nextImage">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="image-viewer-counter" id="imageCounter"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-text">EATERY</div>
+                <img src="images/logo.JPG" alt="Flamingo at Eatery Logo" class="logo-image">
+                <div class="logo-text"><span>FLAMINGO</span></div>
+            </a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">OUR <span>SERVICES</span></h2>
+            
+            <div class="services-tabs">
+                <button class="services-tab-btn active" data-tab="hubbly">Hubbly</button>
+                <button class="services-tab-btn" data-tab="carwash">Car Wash</button>
+                <button class="services-tab-btn" data-tab="conferences">Conferences & Functions</button>
+                <button class="services-tab-btn" data-tab="catering">Event Catering</button>
+                <button class="services-tab-btn" data-tab="upcoming-events">Upcoming Events</button>
+            </div>
+            
+            <!-- Hubbly Service -->
+            <div class="services-tab-content active" id="hubbly">
+                <div class="content-container">
+                    <div class="content-text">
+                        <h2>PREMIUM <span>HUBBLY</span> EXPERIENCE</h2>
+                        <p>Relax and enjoy our premium hubbly (hookah) service in our comfortable lounge area. We offer a variety of premium hookah types to suit your preference. Perfect for social gatherings and casual evenings.</p>
+                        
+                        <div class="hubbly-menu">
+                            <h3>Our Hookah Selection</h3>
+                            <div class="hubbly-flavors">
+                                <div class="hubbly-flavor">
+                                    <h4>German Hubbly</h4>
+                                    <div class="price">R400</div>
+                                    <p>Traditional setup with premium coals and choice of flavor</p>
+                                    <div class="hubbly-booking-info">
+                                        <i class="fas fa-info-circle"></i> Available at the lounge
+                                    </div>
+                                </div>
+                                <div class="hubbly-flavor">
+                                    <h4>Egyptian Hubbly</h4>
+                                    <div class="price">R300</div>
+                                    <p>Contemporary design with enhanced smoking experience</p>
+                                    <div class="hubbly-booking-info">
+                                        <i class="fas fa-info-circle"></i> Available at the lounge
+                                    </div>
+                                </div>
+                                <div class="hubbly-flavor">
+                                    <h4>Weekday Special</h4>
+                                    <div class="price">R150</div>
+                                    <p>Two rounds of kops (Monday - Thursday only)</p>
+                                    <div class="hubbly-booking-info">
+                                        <i class="fas fa-info-circle"></i> Weekday special
+                                    </div>
+                                </div>
+                                <div class="hubbly-flavor">
+                                    <h4>VIP Luxury Hookah</h4>
+                                    <div class="price">Price on request</div>
+                                    <p>Top-tier hookah with premium accessories and service</p>
+                                    <div class="hubbly-booking-info">
+                                        <i class="fas fa-info-circle"></i> Premium experience
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="additional-info" style="margin-top: 25px; background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                            <h4><i class="fas fa-info-circle"></i> Hubbly Service Information:</h4>
+                            <ul style="margin-top: 10px; list-style: none; padding-left: 0;">
+                                <li><strong>• Service Hours:</strong> Daily during lounge hours</li>
+                                <li><strong>• Flavor Selection:</strong> Wide variety of premium flavors available</li>
+                                <li><strong>• Weekday Special:</strong> R150 for two rounds of kops (Mon-Thu only)</li>
+                                <li><strong>• Lounge Service:</strong> Hubbly is only served in our lounge area</li>
+                                <li><strong>• Age Restriction:</strong> Must be 18+ with valid ID</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="booking-notice" style="margin-top: 20px; padding: 15px; background: #fff3cd; border-radius: 8px; border: 1px solid #ffeaa7;">
+                            <h4 style="color: #856404; margin-bottom: 10px;"><i class="fas fa-exclamation-circle"></i> Important Notice:</h4>
+                            <p style="color: #856404; margin-bottom: 0;">Hubbly service is available exclusively at our lounge. Please visit us to enjoy our premium hookah experience.</p>
+                        </div>
+                    </div>
+                    <div class="content-media">
+                        <img src="images/placeholder.JPG" alt="Premium Hubbly Service" data-viewer>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Car Wash Service -->
+            <div class="services-tab-content" id="carwash">
+                <div class="content-container">
+                    <div class="content-media">
+                        <img src="images/carwash1.jpeg" alt="Car Wash Service" data-viewer>
+                        <div class="car-wash-media-grid">
+                            <div class="media-item">
+                                <img src="images/carwash2.jpeg" alt="Car Detailing" data-viewer>
+                            </div>
+                            <div class="media-item">
+                                <img src="images/carwash3.jpeg" alt="Premium Service" data-viewer>
+                            </div>
+                            <div class="media-item">
+                                <img src="images/placeholder.JPG" alt="Exterior Cleaning" data-viewer>
+                            </div>
+                            <div class="media-item">
+                                <img src="images/placeholder.JPG" alt="Interior Detailing" data-viewer>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-text">
+                        <h2>LUXURY <span>CAR WASH</span></h2>
+                        <p>While you enjoy our food and drinks, let us take care of your vehicle with our state-of-the-art car care services. We use only the highest quality products and techniques to make your car shine.</p>
+                        
+                        <div class="features-grid" style="margin-top: 30px;">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-spray-can"></i>
+                                </div>
+                                <h3>Exterior Detailing</h3>
+                                <p>Complete exterior cleaning with premium products</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-soap"></i>
+                                </div>
+                                <h3>Interior Cleaning</h3>
+                                <p>Thorough interior vacuuming and conditioning</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Packages Section -->
+                <div class="car-wash-services">
+                    <h2 class="section-title">OUR <span>SERVICE PACKAGES</span></h2>
+                    
+                    <div class="service-packages">
+                        <div class="service-package">
+                            <h3>BASIC WASH PACKAGES</h3>
+                            <ul style="margin-top: 20px;">
+                                <li><strong>HALF WASH & GO</strong><br>
+                                    Normal: R70 | SUV: R80 | Mini Bus: R120
+                                </li>
+                                <li><strong>FULL WASH & DRY</strong><br>
+                                    Normal: R100 | SUV: R120 | Mini Bus: R200
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Basic%20Wash%20packages" class="btn">
+                                <i class="fab fa-whatsapp"></i> Book Basic Wash
+                            </a>
+                        </div>
+                        
+                        <div class="service-package">
+                            <h3>PREMIUM DETAIL PACKAGES</h3>
+                            <ul style="margin-top: 20px;">
+                                <li><strong>HALF WASH & GO WITH BODY POLISH</strong><br>
+                                    Normal: R80 | SUV: R100 | Mini Bus: R150
+                                </li>
+                                <li><strong>FULL WASH & DRY WITH BODY POLISH</strong><br>
+                                    Normal: R130 | SUV: R160 | Mini Bus: R230
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Premium%20Detail%20packages" class="btn">
+                                <i class="fab fa-whatsapp"></i> Book Premium Detail
+                            </a>
+                        </div>
+                        
+                        <div class="service-package">
+                            <h3>SPECIALIZED SERVICES</h3>
+                            <ul style="margin-top: 20px;">
+                                <li><strong>CARPET WASH ONLY</strong><br>
+                                    Normal: R50 | SUV: R60 | Mini Bus: R90
+                                </li>
+                                <li><strong>SEAT WASH ONLY</strong><br>
+                                    Normal: R80 | SUV: R100 | Mini Bus: R120
+                                </li>
+                                <li><strong>RIM & MAC CLEANER</strong><br>
+                                    All Vehicles: R50
+                                </li>
+                            </ul>
+                            <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Specialized%20Car%20Wash%20services" class="btn">
+                                <i class="fab fa-whatsapp"></i> Book Special Services
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="additional-info" style="margin-top: 40px; background: var(--primary-light); padding: 25px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <h4 style="color: var(--accent-pink); margin-bottom: 15px;"><i class="fas fa-info-circle"></i> Service Information:</h4>
+                        <ul style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                            <li><strong>Vehicle Categories:</strong><br>
+                                • Normal: Sedans, Hatchbacks<br>
+                                • SUV: SUVs, Large Cars<br>
+                                • Mini Bus: Vans, Mini Buses
+                            </li>
+                            <li><strong>Service Hours:</strong><br>
+                                Daily: 10AM - 6PM<br>
+                                Last Wash: 5:30PM
+                            </li>
+                            <li><strong>Payment Methods:</strong><br>
+                                • Cash<br>
+                                • Card<br>
+                                • EFT
+                            </li>
+                            <li><strong>Estimated Time:</strong><br>
+                                • Basic Wash: 30-45 min<br>
+                                • Premium Detail: 60-90 min<br>
+                                • Special Services: 20-40 min
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conferences & Functions -->
+            <div class="services-tab-content" id="conferences">
+                <div class="content-container">
+                    <div class="content-text">
+                        <h2>CONFERENCES & <span>PRIVATE FUNCTIONS</span></h2>
+                        <p>Host your next business meeting, conference, or private function at Eatery at Flamingo. We offer versatile spaces, professional amenities, and customized catering options to make your event a success.</p>
+                        
+                        <div class="conference-features">
+                            <div class="conference-feature">
+                                <i class="fas fa-users"></i>
+                                <h4>Flexible Spaces</h4>
+                                <p>Accommodate small meetings to large gatherings</p>
+                            </div>
+                            <div class="conference-feature">
+                                <i class="fas fa-projector"></i>
+                                <h4>AV Equipment</h4>
+                                <p>Professional audio-visual equipment available</p>
+                            </div>
+                            <div class="conference-feature">
+                                <i class="fas fa-utensils"></i>
+                                <h4>Catering Options</h4>
+                                <p>Customized menus for your event needs</p>
+                            </div>
+                            <div class="conference-feature">
+                                <i class="fas fa-wifi"></i>
+                                <h4>High-Speed WiFi</h4>
+                                <p>Reliable internet connectivity for all attendees</p>
+                            </div>
+                        </div>
+                        
+                        <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20hosting%20a%20conference%20or%20private%20function" class="btn" style="width: auto; display: inline-block; margin-top: 30px;">
+                            <i class="fab fa-whatsapp"></i> Inquire About Functions
+                        </a>
+                    </div>
+                    <div class="content-media">
+                        <img src="images/placeholder.JPG" alt="Conference & Function Space" data-viewer>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Event Catering -->
+            <div class="services-tab-content" id="catering">
+                <div class="content-container">
+                    <div class="content-media">
+                        <img src="images/placeholder.JPG" alt="Event Catering Service" data-viewer>
+                    </div>
+                    <div class="content-text">
+                        <h2>EVENT <span>CATERING</span></h2>
+                        <p>Bring the Eatery at Flamingo experience to your location with our professional catering services. We provide delicious food, professional setup, and exceptional service for any event.</p>
+                        
+                        <div class="catering-packages">
+                            <div class="catering-package">
+                                <h4>Corporate Catering</h4>
+                                <div class="price">From R  /person</div>
+                                <p>Professional catering for business meetings, conferences, and corporate events</p>
+                                <ul style="margin-top: 10px; font-size: 0.9em;">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Corporate%20Catering%20package" class="btn" style="width: auto; margin-top: 15px;">
+                                    <i class="fab fa-whatsapp"></i> Get Quote
+                                </a>
+                            </div>
+                            <div class="catering-package">
+                                <h4>Private Events</h4>
+                                <div class="price">From R  /person</div>
+                                <p>Custom menus for birthdays, anniversaries, and special celebrations</p>
+                                <ul style="margin-top: 10px; font-size: 0.9em;">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Private%20Events%20catering" class="btn" style="width: auto; margin-top: 15px;">
+                                    <i class="fab fa-whatsapp"></i> Get Quote
+                                </a>
+                            </div>
+                            <div class="catering-package">
+                                <h4>Wedding Catering</h4>
+                                <div class="price">From R  /person</div>
+                                <p>Elegant catering options for your special day</p>
+                                <ul style="margin-top: 10px; font-size: 0.9em;">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                                <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Wedding%20Catering%20package" class="btn" style="width: auto; margin-top: 15px;">
+                                    <i class="fab fa-whatsapp"></i> Get Quote
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="additional-info" style="margin-top: 25px; background: #f9f9f9; padding: 20px; border-radius: 8px;">
+                            <h4><i class="fas fa-info-circle"></i> Additional Services:</h4>
+                            <ul style="margin-top: 10px;">
+                                <li><strong>Setup & Service Staff:</strong> R  /hour per staff member</li>
+                                <li><strong>Equipment Rental:</strong> From R  /event</li>
+                                <li><strong>Delivery Fee:</strong> Within 20km radius: R200, Beyond: Custom quote</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Upcoming Events -->
+            <div class="services-tab-content" id="upcoming-events">
+                <h2 class="section-title">POS<span>TERS</span></h2>
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="images/tropical sunsent.jpg" alt="tropical saturay" data-viewer>
+                        </div>
+                        <div class="event-content">
+                            <span class="event-date">DEC 13, 2025</span>
+                            <h3 class="event-title">Tropical Sunset Saturday</h3>
+                            <p class="event-description">An exclusive evening of premium drinks and sophisticated vibes..</p>
+                            <p class="event-price"><strong></strong> </p>
+                            <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Bottomless%20and%20Boujee%20event" class="btn">
+                                <i class="fab fa-whatsapp"></i> Inquire via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="images/sunday.jpg" alt="sunday" data-viewer>
+                        </div>
+                        <div class="event-content">
+                            <span class="event-date">Sunday</span>
+                            <h3 class="event-title">Soak'N Smoke</h3>
+                            <p class="event-description">Home Page For Table Booking.</p>
+                            <p class="event-price"><strong></strong> </p>
+                            <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Flamingo%20Saturday%20event" class="btn">
+                                <i class="fab fa-whatsapp"></i> Inquire via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="event-card">
+                        <div class="event-image">
+                            <img src="images/monday.jpg" alt="Big Bird Saturday" data-viewer>
+                        </div>
+                        <div class="event-content">
+                            <span class="event-date">Only Monday</span>
+                            <h3 class="event-title">Tribal Monday</h3>
+                            <p class="event-description">Enjoy Traditional Meals AT Our Eatery On Mondays.</p>
+                            <p class="event-price"><strong></strong></p>
+                            <p class="event-price"><strong></strong></p>
+                            <a href="https://wa.me/27621369848?text=Hi%20Eatery%20at%20Flamingo%2C%20I'm%20interested%20in%20your%20Big%20Bird%20Saturday%20event" class="btn">
+                                <i class="fab fa-whatsapp"></i> Inquire via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EATERY AT FLAMINGO</h3>
+                    <p>Where casual dining meets premium bar lounge and luxury car care. Experience the perfect blend of great food, drinks, and entertainment.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/27621369848" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>INFORMATION</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Flamingo Avenue, Kagiso 1754</li>
+                        <li><i class="fas fa-phone"></i> +27 62 136 9848</li>
+                        <li><i class="fas fa-envelope"></i>info@eateryflamingo.co.za</li>
+                        <li><i class="fas fa-clock"></i> Open Daily: 12PM - Till Late</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EATERY AT FLAMINGO. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

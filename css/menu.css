@@ -1,0 +1,686 @@
+/* menu.css - Book Style Menu with Portrait Images */
+:root {
+    /* Colors */
+    --primary-light: #ffffff;
+    --secondary-light: #f8f9fa;
+    --accent-pink: #FF007F;
+    --accent-pink-dark: #D6006A;
+    --accent-pink-light: #FF4DA6;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #888888;
+    --border-color: #e0e0e0;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.2);
+    
+    /* Typography */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-weight-normal: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+    --font-weight-black: 800;
+    
+    /* Spacing */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    
+    /* Layout */
+    --header-height: 80px;
+    --header-height-mobile: 70px;
+    --container-max-width: 1200px;
+}
+
+.menu-section {
+    padding: calc(var(--header-height) + var(--space-xl)) 0 var(--space-xxl);
+    background-color: var(--secondary-light);
+    min-height: 100vh;
+}
+
+/* Menu Book Container */
+.menu-book-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+}
+
+.menu-book {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    perspective: 2000px;
+    transform-style: preserve-3d;
+    cursor: grab;
+    transition: transform 0.5s ease;
+}
+
+.menu-book:active {
+    cursor: grabbing;
+}
+
+.menu-page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: transform 0.8s cubic-bezier(0.42, 0, 0.58, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.menu-page.active {
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.menu-page.prev {
+    transform: translateX(-100%) rotateY(-10deg);
+    opacity: 1;
+    z-index: 9;
+    pointer-events: none;
+}
+
+.menu-page.next {
+    transform: translateX(100%) rotateY(10deg);
+    opacity: 1;
+    z-index: 9;
+    pointer-events: none;
+}
+
+.page-content {
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* Cover Page */
+.menu-cover {
+    text-align: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-pink-dark));
+    color: white;
+    border-radius: var(--radius-xl);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-title h2 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: var(--font-weight-black);
+    letter-spacing: 2px;
+}
+
+.cover-logo {
+    margin: 30px 0;
+}
+
+.cover-logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cover-title h3 {
+    font-size: 3rem;
+    margin: 20px 0;
+    font-weight: var(--font-weight-bold);
+}
+
+.cover-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 10px 0 40px;
+}
+
+.open-menu-btn {
+    background: white;
+    color: var(--accent-pink);
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px auto;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.open-menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.cover-address {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.cover-address i {
+    margin-right: 8px;
+}
+
+/* Menu Images */
+.menu-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.page-number {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Controls - Now below the menu book */
+.menu-book-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    padding: var(--space-md);
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 5px 20px var(--shadow-light);
+    order: 2; /* Ensure it comes after menu-book */
+}
+
+.book-control-btn {
+    padding: 12px 24px;
+    background: var(--accent-pink);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.book-control-btn:hover:not(:disabled) {
+    background: var(--accent-pink-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 0, 127, 0.3);
+}
+
+.book-control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-indicators {
+    display: flex;
+    gap: 10px;
+}
+
+.page-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--border-color);
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.page-indicator.active {
+    background: var(--accent-pink);
+    transform: scale(1.2);
+}
+
+.page-indicator:hover {
+    background: var(--accent-pink-light);
+}
+
+/* Actions */
+.menu-book-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    order: 3; /* After controls */
+}
+
+.action-btn {
+    padding: 12px 24px;
+    background: white;
+    color: var(--text-primary);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: var(--transition-normal);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn:hover {
+    border-color: var(--accent-pink);
+    color: var(--accent-pink);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px var(--shadow-light);
+}
+
+/* Instructions */
+.menu-instructions {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
+    order: 4; /* Last item */
+}
+
+.menu-instructions p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+}
+
+.menu-instructions i {
+    color: var(--accent-pink);
+}
+
+/* Fullscreen Mode */
+.menu-book-container.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: var(--secondary-light);
+    padding: 20px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-book-container.fullscreen .menu-book {
+    height: 80vh;
+    max-width: 1000px;
+}
+
+.menu-book-container.fullscreen .menu-book-controls,
+.menu-book-container.fullscreen .menu-book-actions,
+.menu-book-container.fullscreen .menu-instructions {
+    position: relative;
+    z-index: 10000;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+.close-fullscreen {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-pink);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-normal);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.close-fullscreen:hover {
+    background: var(--accent-pink-dark);
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Menu Highlights */
+.menu-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-md);
+    margin-bottom: var(--space-xxl);
+}
+
+.highlight-card {
+    background: var(--primary-light);
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    box-shadow: 0 8px 25px var(--shadow-light);
+    border: 2px solid transparent;
+    transition: var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: var(--transition-slow);
+}
+
+.highlight-card:hover::before {
+    left: 100%;
+}
+
+.highlight-card:hover {
+    border-color: var(--accent-pink);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-medium);
+}
+
+.highlight-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto var(--space-md);
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-pink-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: white;
+    transition: var(--transition-normal);
+}
+
+.highlight-card:hover .highlight-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.highlight-card h4 {
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-bold);
+    transition: var(--transition-normal);
+}
+
+.highlight-card:hover h4 {
+    color: var(--accent-pink);
+}
+
+.highlight-card p {
+    color: var(--text-secondary);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes pageTurn {
+    0% {
+        transform: perspective(2000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(2000px) rotateY(-180deg);
+    }
+}
+
+@keyframes pageTurnReverse {
+    0% {
+        transform: perspective(2000px) rotateY(-180deg);
+    }
+    100% {
+        transform: perspective(2000px) rotateY(0deg);
+    }
+}
+
+.page-turning {
+    animation: pageTurn 0.8s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
+
+.page-turning-reverse {
+    animation: pageTurnReverse 0.8s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.menu-book-container {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .menu-book {
+        height: 600px;
+    }
+    
+    .cover-title h2 {
+        font-size: 3rem;
+    }
+    
+    .cover-title h3 {
+        font-size: 2.5rem;
+    }
+    
+    .cover-logo img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .menu-book-container.fullscreen .menu-book {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-section {
+        padding: calc(var(--header-height) + var(--space-lg)) 0 var(--space-xl);
+    }
+
+    .menu-book {
+        height: 500px;
+    }
+    
+    .menu-book-controls {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .menu-book-actions {
+        flex-wrap: wrap;
+    }
+    
+    .menu-instructions {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .cover-title h2 {
+        font-size: 2.5rem;
+    }
+    
+    .cover-title h3 {
+        font-size: 2rem;
+    }
+    
+    .cover-logo img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .page-content {
+        padding: 20px;
+    }
+    
+    .menu-book-container.fullscreen {
+        padding: 10px;
+    }
+    
+    .menu-book-container.fullscreen .menu-book {
+        height: 60vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-book {
+        height: 400px;
+    }
+    
+    .cover-title h2 {
+        font-size: 2rem;
+    }
+    
+    .cover-title h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cover-subtitle {
+        font-size: 1rem;
+    }
+    
+    .open-menu-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .book-control-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .action-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .menu-book-container.fullscreen .menu-book {
+        height: 50vh;
+    }
+}
+
+/* Print styles */
+@media print {
+    header, 
+    footer, 
+    .menu-highlights, 
+    .menu-book-controls,
+    .menu-book-actions,
+    .menu-instructions,
+    .action-btn,
+    .book-control-btn {
+        display: none !important;
+    }
+    
+    .menu-section {
+        padding: 20px 0 !important;
+    }
+    
+    .menu-book-container {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .menu-book {
+        height: auto;
+        transform: none !important;
+        perspective: none !important;
+        cursor: default !important;
+    }
+    
+    .menu-page {
+        position: static;
+        opacity: 1 !important;
+        transform: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    .menu-image {
+        max-height: 500px;
+    }
+    
+    .page-number {
+        display: none;
+    }
+}

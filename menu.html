@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Eatery at Flamingo</title>
+    <meta name="description" content="Explore our delicious menu featuring gourmet food, handcrafted cocktails, premium spirits, and fine wines at Eatery at Flamingo.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-text">EATERY</div>
+                <img src="images/logo.JPG" alt="Flamingo at Eatery Logo" class="logo-image">
+                <div class="logo-text"><span>FLAMINGO</span></div>
+            </a>
+            <nav id="mainNav">
+                <div class="nav-close" id="navClose">
+                    <i class="fas fa-times"></i>
+                </div>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menu Book Section -->
+    <section class="menu-section">
+        <div class="container">
+            <h2 class="section-title">OUR <span>FOOD & DRINKS</span></h2>
+            
+            <!-- Menu Highlights -->
+            <div class="menu-highlights">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4>Fresh Ingredients</h4>
+                    <p>Locally sourced, always fresh</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-cocktail"></i>
+                    </div>
+                    <h4>Signature Cocktails</h4>
+                    <p>Handcrafted with passion</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h4>Wood-Fired Grill</h4>
+                    <p>Authentic flame-grilled taste</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h4>Vegetarian Options</h4>
+                    <p>Delicious plant-based choices</p>
+                </div>
+            </div>
+            
+            <!-- Menu Book Container -->
+            <div class="menu-book-container">
+                <!-- The Menu Book -->
+                <div class="menu-book">
+                    <!-- Page 1: Cover -->
+                    <div class="menu-page active" data-page="0">
+                        <div class="page-content">
+                            <div class="menu-cover">
+                                <div class="cover-title">
+                                    <h2></h2>
+                                    <div class="cover-logo">
+                                        <img src="images/menu-food-1.JPG" alt="Flamingo at Eatery Logo">
+                                    </div>
+                                    <h2></h2>
+                                    <h3>MENU</h3>
+                                    <p class="cover-subtitle">Culinary Excellence & Premium Libations</p>
+                                </div>
+                                <div class="cover-footer">
+                                    <button class="open-menu-btn">
+                                        <i class="fas fa-book-open"></i>
+                                        Open Menu
+                                    </button>
+                                    <p class="cover-address">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                       
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 2: Food Menu Part 1 -->
+                    <div class="menu-page" data-page="1">
+                        <div class="page-content">
+                            <div class="menu-image-container">
+                                <img src="images/menu-food-2.jpeg" alt="Food Menu Page 1" class="menu-image">
+                            </div>
+                            <div class="page-number">Page 2</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 3: Food Menu Part 2 -->
+                    <div class="menu-page" data-page="2">
+                        <div class="page-content">
+                            <div class="menu-image-container">
+                                <img src="images/menu-food-3.jpeg" alt="Food Menu Page 2" class="menu-image">
+                            </div>
+                            <div class="page-number">Page 3</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 4: Drinks Menu Part 1 -->
+                    <div class="menu-page" data-page="3">
+                        <div class="page-content">
+                            <div class="menu-image-container">
+                                <img src="images/menu-food-4.JPG" alt="Drinks Menu Page 1" class="menu-image">
+                            </div>
+                            <div class="page-number">Page 4</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 5: Drinks Menu Part 2 -->
+                    <div class="menu-page" data-page="4">
+                        <div class="page-content">
+                            <div class="menu-image-container">
+                                <img src="images/menu-food-5.JPG" alt="Drinks Menu Page 2" class="menu-image">
+                            </div>
+                            <div class="page-number">Page 5</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 6: Specials (optional) -->
+                    <div class="menu-page" data-page="5">
+                        <div class="page-content">
+                            <div class="menu-image-container">
+                                <img src="images/menu-food-1.JPG" alt="Specials Menu" class="menu-image">
+                            </div>
+                            <div class="page-number">Page 6</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Controls BELOW the menu book -->
+                <div class="menu-book-controls">
+                    <button class="book-control-btn" id="prevPage" title="Previous Page">
+                        <i class="fas fa-chevron-left"></i>
+                        <span>Previous</span>
+                    </button>
+                    
+                    <div class="page-indicators">
+                        <span class="page-indicator active" data-page="0"></span>
+                        <span class="page-indicator" data-page="1"></span>
+                        <span class="page-indicator" data-page="2"></span>
+                        <span class="page-indicator" data-page="3"></span>
+                        <span class="page-indicator" data-page="4"></span>
+                        <span class="page-indicator" data-page="5"></span>
+                    </div>
+                    
+                    <button class="book-control-btn" id="nextPage" title="Next Page">
+                        <span>Next</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <!-- Additional Controls -->
+                <div class="menu-book-actions">
+                    <button class="action-btn" id="fullscreenToggle">
+                        <i class="fas fa-expand"></i>
+                        <span>Fullscreen</span>
+                    </button>
+                    <button class="action-btn" id="downloadMenu">
+                        <i class="fas fa-download"></i>
+                        <span>Download</span>
+                    </button>
+                    <button class="action-btn" id="printMenu">
+                        <i class="fas fa-print"></i>
+                        <span>Print</span>
+                    </button>
+                </div>
+                
+                <!-- Instructions -->
+                <div class="menu-instructions">
+                    <p><i class="fas fa-mouse-pointer"></i> Click sides to flip pages</p>
+                    <p><i class="fas fa-arrows-alt-h"></i> Swipe left/right on mobile</p>
+                    <p><i class="fas fa-keyboard"></i> Use arrow keys for navigation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>EATERY AT FLAMINGO</h3>
+                    <p>Where casual dining meets premium bar lounge and luxury car care. Experience the perfect blend of great food, drinks, and entertainment.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/27621369848" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>INFORMATION</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Flamingo Avenue, Kagiso 1754</li>
+                        <li><i class="fas fa-phone"></i> +27 62 136 9848</li>
+                        <li><i class="fas fa-envelope"></i>info@eateryflamingo.co.za</li>
+                        <li><i class="fas fa-clock"></i> Open Daily: 12PM - Till Late</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 EATERY AT FLAMINGO. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
