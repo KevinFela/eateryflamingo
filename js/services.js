@@ -1,4 +1,3 @@
-// Services page specific functionality
 document.addEventListener('DOMContentLoaded', function() {
     // Services Tabs
     const servicesTabBtns = document.querySelectorAll('.services-tab-btn');
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.addEventListener('click', () => {
             const tabId = btn.getAttribute('data-tab');
             
-            // Remove active class from all buttons and contents
             servicesTabBtns.forEach(b => b.classList.remove('active'));
             servicesTabContents.forEach(c => c.classList.remove('active'));
             
@@ -138,4 +136,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     updateEventCountdowns();
+
 });
