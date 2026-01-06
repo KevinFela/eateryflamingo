@@ -1,6 +1,5 @@
-/* home.css - Updated Version without Booking Form */
 :root {
-    /* Removed form specific variables */
+    
 }
 
 .hero {
@@ -370,4 +369,5 @@
 .hero .hero-background {
     opacity: 1;
     transition: opacity 0.5s ease;
+
 }
