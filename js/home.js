@@ -1,40 +1,37 @@
-// home.js - Complete Updated Version with WhatsApp Booking
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Home.js loaded - Booking form initialized');
     
-    // Initialize all animations
+ 
     initAnimations();
     
-    // Hero image loading and functionality
+    
     const hero = document.getElementById('hero');
     const scrollIndicator = document.getElementById('scrollIndicator');
     const heroContainer = document.querySelector('.hero-container');
     
-    // Create form overlay for mobile
     const formOverlay = document.createElement('div');
     formOverlay.className = 'form-overlay';
     formOverlay.style.display = 'none';
     document.body.appendChild(formOverlay);
     
-    // Set minimum date to today
     const dateInput = document.getElementById('date');
     if (dateInput) {
         const today = new Date().toISOString().split('T')[0];
         dateInput.min = today;
         
-        // Set default date to tomorrow
+       
         const tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);
         dateInput.value = tomorrow.toISOString().split('T')[0];
     }
     
-    // Set default time to 7:00 PM
+   
     const timeSelect = document.getElementById('time');
     if (timeSelect) {
         timeSelect.value = '19:00';
     }
     
-    // Set default guests to 2
+    
     const guestsSelect = document.getElementById('guests');
     if (guestsSelect) {
         guestsSelect.value = '2';
@@ -82,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const bookingToggle = document.getElementById('bookingToggle');
     const bookingForm = document.getElementById('bookingForm');
     
-    // Add close button to form for mobile
+
     const closeButton = document.createElement('button');
     closeButton.className = 'form-close-btn';
     closeButton.innerHTML = '×';
@@ -91,16 +88,16 @@ document.addEventListener('DOMContentLoaded', function() {
         bookingForm.appendChild(closeButton);
     }
     
-    // Variables to track form state
+    
     let isFormOpen = false;
     
     if (bookingToggle && bookingForm) {
-        // Set initial state
+      
         bookingToggle.style.display = 'flex';
         bookingForm.style.display = 'none';
         bookingForm.classList.remove('active');
         
-        // Show/hide close button based on screen size
+        
         function updateCloseButton() {
             if (window.innerWidth <= 768) {
                 closeButton.style.display = 'flex';
@@ -144,10 +141,9 @@ document.addEventListener('DOMContentLoaded', function() {
         function showForm() {
             isFormOpen = true;
             
-            // Remove closing class if present
             bookingForm.classList.remove('closing');
             
-            // Show overlay on mobile only
+           
             if (window.innerWidth <= 768) {
                 formOverlay.style.display = 'block';
                 setTimeout(() => {
@@ -156,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.body.classList.add('form-open');
             }
             
-            // Show form with animation
+            
             bookingForm.style.display = 'block';
             setTimeout(() => {
                 bookingForm.classList.add('active');
@@ -596,4 +592,5 @@ window.addEventListener('resize', function() {
     if (heroContainer) {
         heroContainer.classList.remove('form-active');
     }
+
 });
