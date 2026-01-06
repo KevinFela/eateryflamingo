@@ -1,4 +1,3 @@
-// gallery.js - Simplified for non-categorized gallery
 document.addEventListener('DOMContentLoaded', function() {
     // Gallery Filtering
     const galleryFilters = document.querySelectorAll('.gallery-filter');
@@ -186,4 +185,5 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
 });
