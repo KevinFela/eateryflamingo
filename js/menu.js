@@ -1,4 +1,3 @@
-// menu.js - Book Style Menu with Page Flipping Animation
 document.addEventListener('DOMContentLoaded', function() {
     // DOM elements
     const menuBook = document.querySelector('.menu-book');
@@ -408,4 +407,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Dispatch a resize event to set initial sizes
     setTimeout(() => window.dispatchEvent(new Event('resize')), 100);
+
 });
