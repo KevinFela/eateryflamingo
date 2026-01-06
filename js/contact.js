@@ -1,6 +1,4 @@
-// contact.js
 document.addEventListener('DOMContentLoaded', function() {
-    // Contact Form Submission
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     const formLoading = document.getElementById('formLoading');
@@ -9,8 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Get form data
+        
             const formData = new FormData(this);
             const data = {
                 name: document.getElementById('contact-name').value,
@@ -381,4 +378,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 300);
         });
     }
+
 });
