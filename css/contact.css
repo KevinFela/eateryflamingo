@@ -1,5 +1,5 @@
 :root {
-    /* Your existing variables plus new ones */
+   
     --accent-pink-light: rgba(255, 0, 127, 0.1);
     --text-muted: #666;
 }
@@ -713,3 +713,4 @@
     }
 
 }
+
