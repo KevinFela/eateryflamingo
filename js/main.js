@@ -1,28 +1,26 @@
-// main.js - Unified Navigation and Common Functionality WITHOUT Booking Form Support
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation - FIXED with proper X button handling
     const mobileMenu = document.getElementById('mobileMenu');
     const mainNav = document.getElementById('mainNav');
     const navClose = document.getElementById('navClose');
     const navLinks = document.querySelectorAll('.nav-link');
     
     if (mobileMenu && mainNav) {
-        // Open mobile menu
+       
         mobileMenu.addEventListener('click', function(e) {
             e.stopPropagation();
             mainNav.classList.add('active');
             document.body.style.overflow = 'hidden';
-            // Change hamburger to X when menu opens
+            
             const menuIcon = this.querySelector('i');
             menuIcon.classList.remove('fa-bars');
             menuIcon.classList.add('fa-times');
         });
         
-        // Close mobile menu with X button - FIXED
+        
         function closeMobileMenu() {
             mainNav.classList.remove('active');
             document.body.style.overflow = '';
-            // Change X back to hamburger when menu closes
+           
             const menuIcon = mobileMenu.querySelector('i');
             menuIcon.classList.remove('fa-times');
             menuIcon.classList.add('fa-bars');
@@ -35,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Close menu when clicking on links
+        
         navLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -43,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        // Close menu when clicking outside - FIXED
+        
         document.addEventListener('click', function(event) {
             const isClickInsideMenu = mainNav.contains(event.target);
             const isClickOnMobileMenu = mobileMenu.contains(event.target);
@@ -57,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // Close menu with Escape key
+     
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape' && mainNav.classList.contains('active')) {
                 closeMobileMenu();
@@ -65,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Set active navigation link based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href');
@@ -183,13 +180,13 @@ function formatPhoneNumber(phone) {
     }
 }
 
-// Utility function to validate email
+
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
 
-// Initialize any page-specific functionality based on current page
+
 function initializePageSpecificFeatures() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
@@ -469,4 +466,5 @@ formValidationStyles.textContent = `
         display: block;
     }
 `;
+
 document.head.appendChild(formValidationStyles);
